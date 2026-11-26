@@ -17,3 +17,6 @@ infra-up: ## start all local backing services (Kafka, MinIO, Redis/Valkey, Postg
 
 infra-down: ## stop all local backing services
 	docker compose -f infra/docker-compose.yaml down
+
+infra-verify: ## run health check verification across all backing services
+	./infra/verify-health.sh
